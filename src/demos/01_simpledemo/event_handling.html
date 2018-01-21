@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Simple Demo</title>
+	<script src="../../js/react.min.js"></script>
+	<script src="../../js/react-dom.min.js"></script>
+	<script src="../../js/browser.min.js"></script>
+</head>
+<body>
+
+<div id="example"></div>
+
+<script type="text/babel">
+
+	var Comment = React.createClass({
+		edit:function(){
+			alert('Editing Comment '+ this.props.children);
+		},
+		remove:function(){
+			alert('Removing Comment');
+		},		
+		render: function(){
+			return (
+				<div>
+					<div>{this.props.children}</div>
+					<button onClick={this.edit}>Edit</button>
+					<button onClick={this.remove}>Remove</button>
+				</div>
+			);
+		}
+	});
+
+
+	ReactDOM.render(
+		<div>
+			<Comment>First Comment</Comment>
+			<Comment>Second Comment</Comment>
+		</div>
+		,document.getElementById('example'));
+	
+</script>
+
+</body>
+</html>
