@@ -9,38 +9,20 @@
 </head>
 <body>
 
-<div id="example"></div>
+<div class="example"></div>
 
 <script type="text/babel">
-
-
-	var Checkbox = React.createClass({
-
-		getInitialState: function(){
-
-			return {checked: true}
-
-		},
-
-		render: function(){
-			var msg;
-			if(this.state.checked){
-				msg = 'checked'
-			}else{
-				msg = 'unchecked'
-			}
-			return (
-				<div>
-					<input type="checkbox" />
-					<h3>Checkbox is {msg}</h3>
-				</div>
-			);
-		}
-
-	});
-
-	ReactDOM.render(<Checkbox />, document.getElementById('example'));
 	
+var News = React.createClass({
+	render: function(){
+		<div>
+
+		</div>
+	}
+});
+
+ReactDOM.render(<News/>, document.getElementbyID('example'));
+
 </script>
 
 </body>
